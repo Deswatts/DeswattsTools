@@ -12,8 +12,8 @@ on:
         type: string
 
 permissions:
-  contents: write      # 用于创建 GitHub Release
-  id-token: write      # 用于 PyPI Trusted Publishing（OIDC）
+  id-token: write   # 必须，用于获取 OIDC 令牌
+  contents: write   # 用于创建 GitHub Release
 
 jobs:
   build-and-publish:
@@ -37,9 +37,7 @@ jobs:
 
       # 发布到 PyPI（推荐使用 Trusted Publishing，无需 token）
       - name: Publish to PyPI
-        env:
-          UV_PUBLISH_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
-        run: uv publish
+        run: uv publish --trusted-publishing always
 
       # 如果不想用 Trusted Publishing，可以改用下面的方式，并设置 PYPI_API_TOKEN secret
       # - name: Publish to PyPI
