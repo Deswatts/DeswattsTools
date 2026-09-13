@@ -1,0 +1,22 @@
+[project]
+name = "deswatts-tools"
+version = "1.0.0"
+requires-python = ">=3.10"
+dependencies = [
+    "colorama>=0.4.6",
+]
+description = "This Package is tool modules for programming"
+authors = [
+    {name = "Deswatts", email = "Deswatts_Cre@outlook.com"}
+]
+maintainers = [
+    {name = "Deswatts", email = "Deswatts_Cre@outlook.com"}
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+keywords = ["logger", "dev", "tool"]
+readme = "README.md"
+
+[build-system]
+requires = ["uv_build >= 0.9.2, <0.10.0"]
+build-backend = "uv_build"
