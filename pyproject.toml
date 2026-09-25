@@ -1,9 +1,9 @@
 [project]
 name = "deswatts-tools"
-version = "1.0.0"
-requires-python = ">=3.10"
+version = "1.0.1"
+requires-python = ">=3.8"
 dependencies = [
-    "colorama>=0.4.6",
+    "colorama",
 ]
 description = "This Package is tool modules for programming"
 authors = [
